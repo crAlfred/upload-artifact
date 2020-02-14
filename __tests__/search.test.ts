@@ -254,7 +254,12 @@ describe('Search', () => {
   })
 
   it('Wildcard search - Relative Path', async () => {
-    const searchPath = path.join('__tests__', '_temp', 'search', '**/*[Ss]earch*')
+    const searchPath = path.join(
+      '__tests__',
+      '_temp',
+      'search',
+      '**/*[Ss]earch*'
+    )
     const searchResult = await findFilesToUpload(searchPath)
     expect(searchResult.filesToUpload.length).toEqual(10)
 
