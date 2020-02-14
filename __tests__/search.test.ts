@@ -225,7 +225,7 @@ describe('Search', () => {
   })
 
   it('Wildcard search - Absolute Path', async () => {
-    const searchPath = path.join(root, '**/*search*')
+    const searchPath = path.join(root, '**/*[Ss]earch*')
     const searchResult = await findFilesToUpload(searchPath)
     expect(searchResult.filesToUpload.length).toEqual(10)
 
@@ -254,7 +254,7 @@ describe('Search', () => {
   })
 
   it('Wildcard search - Relative Path', async () => {
-    const searchPath = path.join('__tests__', '_temp', 'search', '**/*search*')
+    const searchPath = path.join('__tests__', '_temp', 'search', '**/*[Ss]earch*')
     const searchResult = await findFilesToUpload(searchPath)
     expect(searchResult.filesToUpload.length).toEqual(10)
 
